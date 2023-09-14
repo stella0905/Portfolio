@@ -1,7 +1,14 @@
 import React from 'react'
+import Intro from '../components/main/Intro'
+import About from '../components/main/About'
 
 const Main = () => {
-  return <div>Main</div>
+  return (
+    <>
+      <Intro />
+      <About />
+    </>
+  )
 }
 
 export default Main
