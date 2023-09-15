@@ -25,28 +25,28 @@ const Header = () => {
 export default Header
 
 const BackgroundHeader = styled.header`
+  z-index: 99;
   background-color: rgba(44, 43, 43, 0.519);
   width: 100vw;
   height: 60px;
-  padding-left: 30px;
   position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   p {
+    position: fixed;
+    left: 20px;
     border: 1px solid white;
   }
 `
 const MenuBoxDiv = styled.div`
   width: 100vw;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
 
   div {
-    border: 2px solid yellow;
     display: flex;
     gap: 30px;
   }
@@ -55,7 +55,6 @@ const MoveToBtn = styled.button`
   font-size: 23px;
   font-weight: 400;
   color: #ffffff;
-  border: 1px solid pink;
   &:hover {
     transform: scale(1.02);
     transition: 0.2s;

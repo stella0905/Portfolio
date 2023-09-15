@@ -58,7 +58,7 @@ const ContentDiv = styled.div`
     text-align: center;
   }
   p {
-    font-size: 25px;
+    font-size: 21px;
     font-weight: 500;
     line-height: 60px;
   }
@@ -72,9 +72,13 @@ const ContentDiv = styled.div`
 const MoveToLinkBtn = styled.button`
   width: 200px;
   color: wheat;
-  border: 1px solid white;
   border-radius: 30px;
   padding: 5px;
+  &:hover {
+    /* border-bottom: 1px solid white; */
+    box-shadow: 0px 5px 8px;
+    transition: 0.2s;
+  }
   p {
     font-size: 25px;
     font-weight: 800;

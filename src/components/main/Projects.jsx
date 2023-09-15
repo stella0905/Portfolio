@@ -1,21 +1,28 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import defaultImg from '../assets/defaultImg.png'
+import DieDie from './projects/DieDie'
+import Odimedi from './projects/Odimedi'
+import HanghaeCapsule from './projects/HanghaeCapsule'
 
 const Projects = () => {
+  const linkUrls = {
+    diedieGithub: 'https://github.com/diedielolorg/diediefrontend',
+    diedieSite: 'https://diediefrontend.vercel.app/',
+    odimediGithub: 'https://github.com/orgs/diedielolorg/repositories',
+    hanghaeCapsuleGithub: 'https://github.com/H14-Capsule/newClientCapsule',
+  }
+  const moveToLinkBtnHandler = (linkName) => {
+    const url = linkUrls[linkName]
+    if (url) {
+      window.open(url, '_blank')
+    }
+  }
   return (
     <Background id={'project'}>
       <h1>PROJECTS</h1>
-      <ProjectSection>
-        <h2>DIE DIE</h2>
-        <ProjectDiv>
-          <img src={defaultImg} alt={'defaultImg'} />
-          <ContentDiv>
-            팀 프로젝트<p>2명</p>
-            프로젝트 기간<p>진행중</p>
-          </ContentDiv>
-        </ProjectDiv>
-      </ProjectSection>
+      <DieDie moveToLink={moveToLinkBtnHandler} />
+      <Odimedi moveToLink={moveToLinkBtnHandler} />
+      <HanghaeCapsule moveToLink={moveToLinkBtnHandler} />
     </Background>
   )
 }
@@ -33,46 +40,11 @@ const Background = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 100px;
   h1 {
     font-size: 50px;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-`
-const ProjectSection = styled.section`
-  width: 800px;
-  height: 100%;
-  padding: 20px;
-  /* background-color: #ffffff;
-  color: #f95700; */
-  background-color: #ffdfb9;
-  color: #a4193d;
-  h2 {
-    font-size: 40px;
     font-weight: 800;
-    line-height: 50px;
     text-align: center;
-  }
-`
-const ProjectDiv = styled.div`
-  margin-top: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 30px;
-  img {
-    width: 450px;
-    height: 400px;
-  }
-`
-const ContentDiv = styled.div`
-  width: 300px;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 30px;
-  p {
-    color: #80200a;
-    font-size: 18px;
-    font-weight: 400;
+    margin-bottom: 70px;
   }
 `

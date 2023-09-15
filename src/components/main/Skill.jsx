@@ -24,6 +24,7 @@ const Background = styled.div`
   align-items: center;
   h1 {
     font-size: 50px;
+    font-weight: 800;
     text-align: center;
   }
 `

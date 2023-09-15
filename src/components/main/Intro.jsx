@@ -13,7 +13,7 @@ const Intro = () => {
       <Title>
         <h1>Choi Uri &nbsp; Portfolio</h1>
         <h2>Front-End Developer</h2>
-        <p>about Yuri</p>
+        <p>About Yuri</p>
         <MoveBtn onClick={() => scrollToSectionBtnHandler('about')}>⬇️</MoveBtn>
       </Title>
     </Main>
