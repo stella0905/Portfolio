@@ -1,33 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { keyframes, styled } from 'styled-components'
 import intro from '../assets/intro.png'
+import { scrollToSectionHandler } from '../scrollEvent'
 
 const Intro = () => {
-  const [text, setText] = useState('Hello')
-  const [animate, setAnimate] = useState(true)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (text.length > 1) {
-        setText(text.slice(0, -1))
-      } else {
-        setAnimate(false)
-        clearInterval(interval)
-      }
-    }, 1000)
-
-    return () => {
-      clearInterval(interval)
-    }
-  }, [text])
+  const scrollToSectionBtnHandler = (id) => {
+    scrollToSectionHandler(id)
+  }
 
   return (
-    <Main>
+    <Main id={'intro'}>
       <Title>
         <h1>Choi Uri &nbsp; Portfolio</h1>
         <h2>Front-End Developer</h2>
         <p>about Yuri</p>
-        <MoveBtn>⬇️</MoveBtn>
+        <MoveBtn onClick={() => scrollToSectionBtnHandler('about')}>⬇️</MoveBtn>
       </Title>
     </Main>
   )
@@ -99,15 +86,18 @@ const fadeInOut = keyframes`
 
 const MoveBtn = styled.button`
   color: #060606cb;
-
   border: none;
   cursor: pointer;
   font-size: 100px;
   animation: ${bounce} 1s ease infinite;
 
   &:hover {
-    animation: ${fadeInOut} 2s ease-in-out infinite;
+    animation-name: ${fadeInOut}, ${bounce};
+    animation-duration: 2s, 1s;
+    animation-timing-function: ease-in-out, ease;
+    animation-iteration-count: infinite;
+
     transform: scale(1.05);
-    transition: 0.2;
+    transition: 0.2s;
   }
 `
