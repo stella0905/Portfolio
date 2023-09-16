@@ -1,18 +1,11 @@
 import React from 'react'
 import about from '../assets/about.png'
 import { styled } from 'styled-components'
+import { moveToLink } from '../common/linkUrls'
 
 const About = () => {
-  const linkUrls = {
-    github: 'https://github.com/stella0905',
-    blog: 'https://stella0905.tistory.com/',
-  }
-
   const moveToLinkBtnHandler = (linkName) => {
-    const url = linkUrls[linkName]
-    if (url) {
-      window.open(url, '_blank')
-    }
+    moveToLink(linkName)
   }
   return (
     <AboutDiv id={'about'}>

@@ -3,19 +3,11 @@ import { styled } from 'styled-components'
 import DieDie from './projects/DieDie'
 import Odimedi from './projects/Odimedi'
 import HanghaeCapsule from './projects/HanghaeCapsule'
+import { moveToLink } from '../common/linkUrls'
 
 const Projects = () => {
-  const linkUrls = {
-    diedieGithub: 'https://github.com/diedielolorg/diediefrontend',
-    diedieSite: 'https://diediefrontend.vercel.app/',
-    odimediGithub: 'https://github.com/orgs/diedielolorg/repositories',
-    hanghaeCapsuleGithub: 'https://github.com/H14-Capsule/newClientCapsule',
-  }
   const moveToLinkBtnHandler = (linkName) => {
-    const url = linkUrls[linkName]
-    if (url) {
-      window.open(url, '_blank')
-    }
+    moveToLink(linkName)
   }
   return (
     <Background id={'project'}>
@@ -33,6 +25,7 @@ const Background = styled.div`
   width: 100vw;
   height: 100%;
   padding: 50px;
+  padding-bottom: 100px;
   background-color: #101820;
   color: #f2aa4c;
 
@@ -45,6 +38,5 @@ const Background = styled.div`
     font-size: 50px;
     font-weight: 800;
     text-align: center;
-    margin-bottom: 70px;
   }
 `
