@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import odimedi from '../../assets/odimedi.gif'
 import * as CSS from './style'
+import { ReactComponent as Arrow } from '../../assets/arrow.svg'
 
 const Odimedi = ({ moveToLink }) => {
   const [isUpperHidden, setIsUpperHidden] = useState(true)
@@ -38,7 +39,10 @@ const Odimedi = ({ moveToLink }) => {
               사용한 기술스텍
               <p>React, JavaScript, Recoil, kakaomap api, Axios, React-Query, styled-component</p>
               <CSS.MoveToBox>
-                <button onClick={() => moveToLink('odimediGithub')}>GitHub ➡️</button>
+                <button onClick={() => moveToLink('odimediGithub')}>
+                  GitHub
+                  <Arrow width="40" height="40" fill="black" />
+                </button>
               </CSS.MoveToBox>
             </CSS.ContentDiv>
           </CSS.ProjectDiv>

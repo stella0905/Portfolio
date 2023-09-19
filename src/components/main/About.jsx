@@ -1,7 +1,8 @@
 import React from 'react'
-import about from '../assets/about.png'
 import { styled } from 'styled-components'
 import { moveToLink } from '../common/linkUrls'
+import { about } from '../assets'
+import { ReactComponent as Arrow } from '../assets/arrow.svg'
 
 const About = () => {
   const moveToLinkBtnHandler = (linkName) => {
@@ -17,10 +18,12 @@ const About = () => {
         <p>어떻게든 해내겠다는 의지와 쉽게 포기하지않는 근성이 저의 장점입니다.</p>
         <div>
           <MoveToLinkBtn onClick={() => moveToLinkBtnHandler('github')}>
-            <p>GitHub &nbsp; ➡️ </p>
+            <p>GitHub </p>
+            <Arrow width="50" fill="#f0e1c5" />
           </MoveToLinkBtn>
           <MoveToLinkBtn onClick={() => moveToLinkBtnHandler('blog')}>
-            <p>Blog &nbsp; ➡️ </p>
+            <p>Blog </p>
+            <Arrow width="50" fill="#f0e1c5" />
           </MoveToLinkBtn>
         </div>
       </ContentDiv>
@@ -43,7 +46,7 @@ const AboutDiv = styled.div`
 const ContentDiv = styled.div`
   /* border: 1px solid red; */
   margin-top: 170px;
-  color: white;
+  color: #f0e1c5;
   h1 {
     margin-bottom: 70px;
     font-size: 50px;
@@ -56,7 +59,7 @@ const ContentDiv = styled.div`
     line-height: 60px;
   }
   div {
-    margin-top: 140px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     gap: 180px;
@@ -67,16 +70,19 @@ const MoveToLinkBtn = styled.button`
   color: wheat;
   border-radius: 30px;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
   &:hover {
-    /* border-bottom: 1px solid white; */
-    box-shadow: 0px 5px 8px;
+    border-bottom: 1px solid wheat;
     transition: 0.2s;
   }
   p {
     font-size: 25px;
     font-weight: 800;
     &:hover {
-      transform: scale(1.1);
       transition: 0.2s;
     }
   }

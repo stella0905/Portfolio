@@ -1,7 +1,7 @@
 import React from 'react'
 import { keyframes, styled } from 'styled-components'
-import intro from '../assets/intro.png'
 import { scrollToSectionHandler } from '../scrollEvent'
+import { bottomArrow, intro } from '../assets'
 
 const Intro = () => {
   const scrollToSectionBtnHandler = (id) => {
@@ -14,7 +14,9 @@ const Intro = () => {
         <h1>Choi Uri &nbsp; Portfolio</h1>
         <h2>Front-End Developer</h2>
         <p>About Yuri</p>
-        <MoveBtn onClick={() => scrollToSectionBtnHandler('about')}>⬇️</MoveBtn>
+        <MoveBtn onClick={() => scrollToSectionBtnHandler('about')}>
+          <img src={bottomArrow} alt="bottomArrowBtnIcon" />
+        </MoveBtn>
       </Title>
     </Main>
   )
@@ -64,7 +66,7 @@ const Title = styled.div`
     font-size: 50px;
   }
   p {
-    margin-top: 100px;
+    margin-top: 120px;
     font-size: 30px;
   }
 `
@@ -88,8 +90,11 @@ const MoveBtn = styled.button`
   color: #060606cb;
   border: none;
   cursor: pointer;
-  font-size: 100px;
   animation: ${bounce} 1s ease infinite;
+
+  img {
+    width: 100px;
+  }
 
   &:hover {
     animation-name: ${fadeInOut}, ${bounce};

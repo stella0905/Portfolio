@@ -1,6 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import { moveToLink } from '../common/linkUrls'
+import { ReactComponent as Arrow } from '../assets/arrow.svg'
 
 const Experiences = () => {
   const moveToLinkBtnHandler = (linkName) => {
@@ -12,7 +13,10 @@ const Experiences = () => {
       <StudyDiv>
         <h2>Study</h2>
         <h3>프론트 언어기술 스터디 </h3>
-        <button onClick={() => moveToLinkBtnHandler('frontStudyNotion')}>Study Wiki ➡️</button>
+        <button onClick={() => moveToLinkBtnHandler('frontStudyNotion')}>
+          Study Wiki
+          <Arrow width="50" height="50" fill="#f2aa4c" />
+        </button>
         <ContentDiv>
           d?D?D?D?<p>?D?D?D</p>
         </ContentDiv>
@@ -56,6 +60,8 @@ const StudyDiv = styled.div`
     font-weight: 800;
   }
   button {
+    display: flex;
+    align-items: center;
     color: #f2aa4c;
     font-size: 19px;
     font-weight: 500;

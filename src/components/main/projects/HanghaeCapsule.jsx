@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import hanghaeCapsule from '../../assets/hanghaeCapsule.gif'
 import * as CSS from './style'
+import { ReactComponent as Arrow } from '../../assets/arrow.svg'
 
 const HanghaeCapsule = ({ moveToLink }) => {
   const [isUpperHidden, setIsUpperHidden] = useState(true)
@@ -45,7 +46,10 @@ const HanghaeCapsule = ({ moveToLink }) => {
                 <br /> React-Query, styled-component
               </p>
               <CSS.MoveToBox>
-                <button onClick={() => moveToLink('hanghaeCapsuleGithub')}>GitHub ➡️</button>
+                <button onClick={() => moveToLink('hanghaeCapsuleGithub')}>
+                  GitHub
+                  <Arrow width="40" height="40" fill="black" />
+                </button>
               </CSS.MoveToBox>
             </CSS.ContentDiv>
           </CSS.ProjectDiv>

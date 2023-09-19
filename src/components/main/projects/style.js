@@ -72,7 +72,12 @@ export const MoveToBox = styled.div`
   gap: 10px;
   position: absolute;
   bottom: 50px;
+  height: 40px;
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: transparent;
     border: none;
     color: #101820;

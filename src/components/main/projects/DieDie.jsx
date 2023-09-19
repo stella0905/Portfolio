@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import diedie from '../../assets/diedie.gif'
 import * as CSS from './style'
+import { ReactComponent as Arrow } from '../../assets/arrow.svg'
 
 const DieDie = ({ moveToLink }) => {
   const [isUpperHidden, setIsUpperHidden] = useState(true)
@@ -42,8 +43,15 @@ const DieDie = ({ moveToLink }) => {
                 <br /> React-i18next
               </p>
               <CSS.MoveToBox>
-                <button onClick={() => moveToLink('diedieGithub')}>GitHub ➡️</button>
-                <button onClick={() => moveToLink('diedieSite')}>Visit Website ➡️</button>
+                <button onClick={() => moveToLink('diedieGithub')}>
+                  GitHub
+                  <Arrow width="40" height="40" fill="black" />
+                </button>
+
+                <button onClick={() => moveToLink('diedieSite')}>
+                  Visit Website
+                  <Arrow width="40" height="40" fill="black" />
+                </button>
               </CSS.MoveToBox>
             </CSS.ContentDiv>
           </CSS.ProjectDiv>
