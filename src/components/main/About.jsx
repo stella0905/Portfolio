@@ -3,19 +3,22 @@ import { styled } from 'styled-components'
 import { moveToLink } from '../common/linkUrls'
 import { about } from '../assets'
 import { ReactComponent as Arrow } from '../assets/arrow.svg'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
+  const { t } = useTranslation()  
+
   const moveToLinkBtnHandler = (linkName) => {
     moveToLink(linkName)
   }
   return (
     <AboutDiv id={'about'}>
       <ContentDiv>
-        <h1>- 최유리 -</h1>
-        <p>협업과 지식 공유를 중요시하는 프론트엔드 개발자 입니다.</p>
-        <p>다른 동료들과 함께 지식을 나누고 함께 성장하는 것에 큰 관심을 가지고 있습니다.</p>
-        <p>시각적 피드백과 즉각적인 결과물에서 성취감을 느껴 프론트엔드 개발을 시작하였습니다.</p>
-        <p>어떻게든 해내겠다는 의지와 쉽게 포기하지않는 근성이 저의 장점입니다.</p>
+        <h1>- {t('Choi Uri')} -</h1>
+        <p>{t('협업과 지식 공유를 중요시하는 프론트엔드 개발자 입니다.')}</p>
+        <p>{t('다른 동료들과 함께 지식을 나누고 함께 성장하는 것에 큰 관심을 가지고 있습니다.')}</p>
+        <p>{t('시각적 피드백과 즉각적인 결과물에서 성취감을 느껴 프론트엔드 개발을 시작하였습니다.')}</p>
+        <p>{t('어떻게든 해내겠다는 의지와 쉽게 포기하지않는 근성이 저의 장점입니다.')}</p>
         <div>
           <MoveToLinkBtn onClick={() => moveToLinkBtnHandler('github')}>
             <p>GitHub </p>

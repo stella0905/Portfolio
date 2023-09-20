@@ -5,5 +5,7 @@ import diedie from './diedie.gif'
 import hanghaeCapsule from './hanghaeCapsule.gif'
 import intro from './intro.png'
 import odimedi from './odimedi.gif'
+import langEn from './langEn.svg'
+import langKo from './langKo.svg'
 
-export { arrow, bottomArrow, about, diedie, hanghaeCapsule, intro, odimedi }
+export { arrow, bottomArrow, about, diedie, hanghaeCapsule, intro, odimedi, langEn, langKo }

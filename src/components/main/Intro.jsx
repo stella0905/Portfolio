@@ -2,8 +2,10 @@ import React from 'react'
 import { keyframes, styled } from 'styled-components'
 import { scrollToSectionHandler } from '../scrollEvent'
 import { bottomArrow, intro } from '../assets'
+import { useTranslation } from 'react-i18next'
 
 const Intro = () => {
+  const { t } = useTranslation()
   const scrollToSectionBtnHandler = (id) => {
     scrollToSectionHandler(id)
   }
@@ -11,9 +13,11 @@ const Intro = () => {
   return (
     <Main id={'intro'}>
       <Title>
-        <h1>Choi Uri &nbsp; Portfolio</h1>
-        <h2>Front-End Developer</h2>
-        <p>About Yuri</p>
+        <h1>
+          {t('Choi Uri')}&nbsp; {t('Portfolio')}
+        </h1>
+        <h2>{t('Front-End Developer')}</h2>
+        <p>{t('About Yuri')}</p>
         <MoveBtn onClick={() => scrollToSectionBtnHandler('about')}>
           <img src={bottomArrow} alt="bottomArrowBtnIcon" />
         </MoveBtn>

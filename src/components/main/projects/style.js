@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 export const ProjectSection = styled.section`
   width: 850px;
-  height: 470px;
+  height: 500px;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 20px;
@@ -52,7 +52,7 @@ export const ProjectDiv = styled.div`
   gap: 20px;
   img {
     width: 400px;
-    height: 300px;
+    height: 320px;
   }
 `
 export const ContentDiv = styled.div`
@@ -100,6 +100,15 @@ export const DetailContentDiv = styled.div`
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
+  p {
+    color: #63605f;
+    font-size: 16px;
+    font-weight: 400;
+  }
+`
+export const ContributionsDiv = styled.div`
+  display: flex;
+  flex-direction: row;
   p {
     color: #63605f;
     font-size: 16px;

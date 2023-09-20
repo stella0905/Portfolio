@@ -1,23 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from 'styled-components'
 import { scrollToSectionHandler } from '../scrollEvent'
+import { useTranslation } from 'react-i18next'
+import { langEn, langKo } from '../assets'
 
 const Header = () => {
+  const { t, i18n } = useTranslation()
+  const [isKorean, setIsKorean] = useState(true)
   const scrollToSectionBtnHandler = (id) => {
     scrollToSectionHandler(id)
+  }
+  const translateBtnHandler = (lang) => {
+    setIsKorean((prevState) => !prevState)
+    i18n.changeLanguage(lang)
   }
   return (
     <BackgroundHeader>
       <p>로고 들어올 예정</p>
       <MenuBoxDiv>
         <div>
-          <MoveToBtn onClick={() => scrollToSectionBtnHandler('intro')}>Intro</MoveToBtn>
+          <MoveToBtn onClick={() => scrollToSectionBtnHandler('intro')}>{t('Intro')}</MoveToBtn>
           <MoveToBtn onClick={() => scrollToSectionBtnHandler('about')}>About</MoveToBtn>
           <MoveToBtn onClick={() => scrollToSectionBtnHandler('skill')}>Skill</MoveToBtn>
           <MoveToBtn onClick={() => scrollToSectionBtnHandler('project')}>Projects</MoveToBtn>
           <MoveToBtn onClick={() => scrollToSectionBtnHandler('experiences')}>Experiences</MoveToBtn>
         </div>
       </MenuBoxDiv>
+      <TransBtn onClick={() => translateBtnHandler(isKorean ? 'en' : 'ko')} isKorean={isKorean} />
     </BackgroundHeader>
   )
 }
@@ -59,4 +68,11 @@ const MoveToBtn = styled.button`
     transform: scale(1.02);
     transition: 0.2s;
   }
+`
+const TransBtn = styled.button`
+  cursor: pointer;
+  background-image: url(${(props) => (props.isKorean ? langKo : langEn)});
+  width: 55px;
+  height: 32px;
+  background-color: transparent;
 `
