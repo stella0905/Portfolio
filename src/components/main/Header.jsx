@@ -63,7 +63,7 @@ const MenuBoxDiv = styled.div`
 const MoveToBtn = styled.button`
   font-size: 23px;
   font-weight: 400;
-  color: #ffffff;
+  color: wheat;
   &:hover {
     transform: scale(1.02);
     transition: 0.2s;
@@ -75,4 +75,6 @@ const TransBtn = styled.button`
   width: 55px;
   height: 32px;
   background-color: transparent;
+  position: absolute;
+  right: 20px;
 `
