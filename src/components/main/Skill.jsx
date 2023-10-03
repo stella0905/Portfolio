@@ -1,8 +1,11 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import { css, figma, github, html, javascript, react, recoil, redux, styledcomponents, vercel } from '../assets/skills'
+import { useTranslation } from 'react-i18next'
 
 const Skill = () => {
+  const { t } = useTranslation()
+
   const skills = [
     {
       img: html,
@@ -47,7 +50,7 @@ const Skill = () => {
     {
       img: github,
       name: 'Git/GitHub',
-      desc: '형상관리 및 협업\n\rfork,pl 활용',
+      desc: '형상관리 및 협업\n\rFork,PR 활용',
     },
     {
       img: vercel,
@@ -64,7 +67,7 @@ const Skill = () => {
             <SkillWrapDiv>
               <SkillImg src={skill.img} />
               <SkillName>{skill.name}</SkillName>
-              <SkillDesc>{skill.desc}</SkillDesc>
+              <SkillDesc>{t(skill.desc)}</SkillDesc>
             </SkillWrapDiv>
           )
         })}
@@ -87,7 +90,8 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   h1 {
-    margin-top: 40px;
+    margin-top: 80px;
+    margin-bottom: 20px;
     font-size: 50px;
     font-weight: 800;
     text-align: center;
@@ -97,7 +101,7 @@ const SkillItemWrap = styled.div`
   margin-top: 70px;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
 `
@@ -116,6 +120,7 @@ const SkillDesc = styled.p`
   position: absolute;
   font-size: 25px;
   font-weight: 300;
+  line-height: 30px;
   text-align: center;
   color: #ffffff;
   left: 0px;
@@ -128,7 +133,7 @@ const SkillWrapDiv = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0px 28px;
-  height: 110px;
+  height: 130px;
   border-radius: 10px;
   width: fit-content;
   ${SkillDesc} {

@@ -1,84 +1,73 @@
 import React from 'react'
+import Slider from 'react-slick'
 import { styled } from 'styled-components'
-import { moveToLink } from '../common/linkUrls'
-import { ReactComponent as Arrow } from '../assets/arrow.svg'
+import Study from '../experience/Study'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import Education from '../experience/Education'
 
 const Experiences = () => {
-  const moveToLinkBtnHandler = (linkName) => {
-    moveToLink(linkName)
+  const setting = {
+    slide: 'div', //슬라이드 되어야 할 태그 ex) div, li
+    infinite: true, //무한 반복 옵션
+    dots: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true, //드래그 가능 여부
   }
   return (
-    <Background id={'experiences'}>
-      <h1>Experiences</h1>
-      <StudyDiv>
-        <h2>Study</h2>
-        <h3>프론트 언어기술 스터디 </h3>
-        <button onClick={() => moveToLinkBtnHandler('frontStudyNotion')}>
-          Study Wiki
-          <Arrow width="50" height="50" fill="#f2aa4c" />
-        </button>
-        <ContentDiv>
-          d?D?D?D?<p>?D?D?D</p>
-        </ContentDiv>
-      </StudyDiv>
+    <Background id={'experience'}>
+      <h1>experience</h1>
+      <StyledSlider {...setting}>
+        <div>
+          <Education />
+        </div>
+        <div>
+          <Study />
+        </div>
+      </StyledSlider>
     </Background>
   )
 }
 
 export default Experiences
-
 const Background = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100%;
-  padding: 50px;
+  padding-right: 400px;
+  padding-left: 400px;
+  padding-bottom: 100px;
   background-color: #364b44;
   color: #f2aa4c;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   h1 {
+    margin-top: 80px;
+
     font-size: 50px;
     font-weight: 800;
     text-align: center;
   }
 `
-const StudyDiv = styled.div`
-  border: 1px solid red;
-  margin-top: 50px;
-  width: 500px;
-  line-height: 40px;
-  h2 {
-    color: white;
-    font-size: 30px;
-    font-weight: 800;
+const StyledSlider = styled(Slider)`
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: 5%;
   }
-  h3 {
-    color: white;
-    font-size: 20px;
-    font-weight: 800;
-  }
-  button {
+
+  .slick-slide {
     display: flex;
-    align-items: center;
-    color: #f2aa4c;
-    font-size: 19px;
-    font-weight: 500;
+    justify-content: center;
+    height: 100%;
     border: none;
-    &:hover {
-      transform: scale(1.05);
-      transition: 0.2s;
-    }
+    box-sizing: border-box;
   }
-`
-const ContentDiv = styled.div`
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  p {
-    color: #63605f;
-    font-size: 18px;
-    font-weight: 600;
+
+  .slick-slide div {
+    object-fit: cover;
+    height: 100%;
+    box-sizing: border-box;
+    margin-bottom: 7px;
   }
 `

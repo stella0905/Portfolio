@@ -35,6 +35,7 @@ const Background = styled.div`
   align-items: center;
   gap: 100px;
   h1 {
+    margin-top: 30px;
     font-size: 50px;
     font-weight: 800;
     text-align: center;

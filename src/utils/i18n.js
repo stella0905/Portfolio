@@ -9,11 +9,9 @@ const resources = {
   ko: { translation: tranKo },
 }
 
-const userLanguage = window.navigator.language || window.navigator.language
-
 i18n.use(initReactI18next).init({
   resources,
-  lng: localStorage.getItem('language') || userLanguage || 'ko',
+  lng: 'ko',
   fallbackLng: 'ko',
   debug: true,
   keySeparator: false,
