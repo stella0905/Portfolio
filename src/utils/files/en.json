@@ -20,7 +20,7 @@
   "다국어 처리, 반응형, 유저 검색, 파일 업로드, 랭킹 조회": "Multilingual support, responsive design, user search, file upload, ranking",
   "프로젝트에 기여한점": "Contributions to the Project",
   "타입스크립트와 반응형을 도전과제로 구현": "Implemented TypeScript and responsiveness as challenging tasks",
-  "API 통신을 위해 instance 생성 및 API 코드를 공통으로 사용할 수 있는 interceptors를 작성해서 코드 길이를 짧게는 3줄로 간결화함.": "Created instances for API communication and wrote interceptors for common use of API code, reducing code length to just 3 lines.",
+  "axios interceptor에서 http method 호출 및 응답 try-catch 코드 추상화 진행": "abstracting try-catch code for HTTP calls and responses in an axios interceptor.",
   "해외게임 특성상 react-i18next를 사용하여 다국어 처리함.": "Due to the nature of international gaming, multilingual support is implemented using react-i18next.",
   "항해캡슐": "Hanghae Capsule",
   "부트캠프를 잘 완수한 나에게 쓰는 타임캡슐 서비스": "A Time Capsule Service Written to Myself Who Successfully Completed the Bootcamp",

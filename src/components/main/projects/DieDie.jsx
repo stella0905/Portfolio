@@ -91,11 +91,7 @@ const DieDie = ({ moveToLink }) => {
               </CSS.ContributionsDiv>
               <CSS.ContributionsDiv>
                 <p>💡</p>
-                <p>
-                  {t(
-                    'API 통신을 위해 instance 생성 및 API 코드를 공통으로 사용할 수 있는 interceptors를 작성해서 코드 길이를 짧게는 3줄로 간결화함.',
-                  )}
-                </p>
+                <p>{t('axios interceptor에서 http method 호출 및 응답 try-catch 코드 추상화 진행')}</p>
               </CSS.ContributionsDiv>
               <CSS.ContributionsDiv>
                 <p>💡</p> <p>{t('해외게임 특성상 react-i18next를 사용하여 다국어 처리함.')}</p>
