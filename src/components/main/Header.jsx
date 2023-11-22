@@ -91,7 +91,7 @@ const MenuBoxDiv = styled.div`
       align-items: end;
       position: absolute;
       right: 10px;
-      top: 80px;
+      top: 65px;
       gap: 0;
       background-color: #00000073;
       display: ${({ isMenuBar }) => (isMenuBar ? 'flex' : 'none')};

@@ -14,10 +14,12 @@ const About = () => {
     <AboutDiv id={'about'}>
       <ContentDiv>
         <h1>- {t('Choi Uri')} -</h1>
-        <p>{t('협업과 지식 공유를 중요시하는 프론트엔드 개발자 입니다.')}</p>
-        <p>{t('다른 동료들과 함께 지식을 나누고 함께 성장하는 것에 큰 관심을 가지고 있습니다.')}</p>
-        <p>{t('시각적 피드백과 즉각적인 결과물에서 성취감을 느껴 프론트엔드 개발을 시작하였습니다.')}</p>
-        <p>{t('어떻게든 해내겠다는 의지와 쉽게 포기하지않는 근성이 저의 장점입니다.')}</p>
+        <div className="contentP">
+          <p>{t('협업과 지식 공유를 중요시하는 프론트엔드 개발자 입니다.')}</p>
+          <p>{t('다른 동료들과 함께 지식을 나누고 함께 성장하는 것에 큰 관심을 가지고 있습니다.')}</p>
+          <p>{t('시각적 피드백과 즉각적인 결과물에서 성취감을 느껴 프론트엔드 개발을 시작하였습니다.')}</p>
+          <p>{t('어떻게든 해내겠다는 의지와 쉽게 포기하지않는 근성이 저의 장점입니다.')}</p>
+        </div>
         <MoveToLinkBoxDiv>
           <p>
             <label>GitHub</label> :
@@ -83,17 +85,36 @@ const AboutDiv = styled.div`
 
 const ContentDiv = styled.div`
   /* border: 1px solid red; */
-  margin-top: 120px;
+  margin-top: 100px;
   color: #f0e1c5;
   h1 {
     margin-bottom: 50px;
     font-size: 50px;
     font-weight: 800;
     text-align: center;
+    @media screen and (max-width: 580px) {
+      font-size: 30px;
+    }
+  }
+  .contentP p {
+    width: 900px;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    @media screen and (max-width: 900px) {
+      font-size: 18px;
+      width: 600px;
+    }
+    @media screen and (max-width: 580px) {
+      font-size: 15px;
+      width: 450px;
+    }
   }
   p {
     font-size: 21px;
     font-weight: 500;
-    line-height: 60px;
+    line-height: 50px;
   }
 `
