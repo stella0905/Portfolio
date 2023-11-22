@@ -8,5 +8,6 @@ import odimedi from './odimedi.gif'
 import langEn from './langEn.svg'
 import langKo from './langKo.svg'
 import uri from './uri.png'
+import menubar from './menubar.png'
 
-export { arrow, bottomArrow, about, diedie, hanghaeCapsule, intro, odimedi, langEn, langKo, uri }
+export { arrow, bottomArrow, about, diedie, hanghaeCapsule, intro, odimedi, langEn, langKo, uri, menubar }

@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { styled } from 'styled-components'
 import { scrollToSectionHandler } from '../scrollEvent'
 import { useTranslation } from 'react-i18next'
-import { langEn, langKo, uri } from '../assets'
+import { langEn, langKo, uri, menubar } from '../assets'
 
 const Header = () => {
   const { t, i18n } = useTranslation()
   const [isKorean, setIsKorean] = useState(true)
+  const [isMenuBar, setIsMenuBar] = useState(false)
   const scrollToSectionBtnHandler = (id) => {
     scrollToSectionHandler(id)
   }
@@ -14,13 +15,17 @@ const Header = () => {
     setIsKorean((prevState) => !prevState)
     i18n.changeLanguage(lang)
   }
+  const openMenuBarBtnHandler = () => {
+    setIsMenuBar(!isMenuBar)
+    console.log(isMenuBar)
+  }
   return (
     <BackgroundHeader>
       <Logo>
         <img src={uri} alt="logoImg" />
         {t('최유리')}
       </Logo>
-      <MenuBoxDiv>
+      <MenuBoxDiv isMenuBar={isMenuBar}>
         <div>
           <MoveToBtn onClick={() => scrollToSectionBtnHandler('intro')}>{t('Intro')}</MoveToBtn>
           <MoveToBtn onClick={() => scrollToSectionBtnHandler('about')}>About</MoveToBtn>
@@ -30,6 +35,7 @@ const Header = () => {
         </div>
       </MenuBoxDiv>
       <TransBtn onClick={() => translateBtnHandler(isKorean ? 'en' : 'ko')} isKorean={isKorean} />
+      <MenuBarImg src={menubar} alt="MenuBar" onClick={openMenuBarBtnHandler} isMenuBar={isMenuBar} />
     </BackgroundHeader>
   )
 }
@@ -79,15 +85,34 @@ const MenuBoxDiv = styled.div`
   div {
     display: flex;
     gap: 30px;
+    @media screen and (max-width: 900px) {
+      /* border: 2px solid red; */
+      flex-direction: column;
+      align-items: end;
+      position: absolute;
+      right: 10px;
+      top: 80px;
+      gap: 0;
+      background-color: #00000073;
+      display: ${({ isMenuBar }) => (isMenuBar ? 'flex' : 'none')};
+    }
   }
 `
 const MoveToBtn = styled.button`
   font-size: 23px;
   font-weight: 400;
-  color: wheat;
+  color: #f5deb3;
   &:hover {
     transform: scale(1.02);
     transition: 0.2s;
+  }
+  @media screen and (max-width: 900px) {
+    width: 180px;
+    padding: 10px;
+    text-align: end;
+    &:hover {
+      border: 1px solid gray;
+    }
   }
 `
 const TransBtn = styled.button`
@@ -98,4 +123,18 @@ const TransBtn = styled.button`
   background-color: transparent;
   position: absolute;
   right: 20px;
+  @media screen and (max-width: 900px) {
+    right: 70px;
+  }
+`
+
+const MenuBarImg = styled.img`
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
 `
