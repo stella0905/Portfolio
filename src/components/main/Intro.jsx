@@ -157,7 +157,7 @@ const MoveBtn = styled.button`
       font-size: 15px;
     }
   }
-  @media (max-height: 600px) {
+  @media (max-width: 500px) or (max-height: 600px) {
     display: none;
   }
 `
