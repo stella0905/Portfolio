@@ -73,9 +73,10 @@ const HanghaeCapsule = ({ moveToLink }) => {
                   '부트캠프 시작전에 수료시점의 나에게 타임캡슐을 작성하는 서비스이며 독학하면서 구현에만 급급했던 코드와 유지 보수성을 고려한 코드의 차이점을 직접 비교해보기 위해 V2구현',
                 )}
               </p>
+              <br />
+
               {t('주요 기능')}
               <p>{t('편지 작성, 이메일 인증, 응원글 작성, 타이머')}</p>
-              <br />
             </CSS.DetailContentDiv>
             <CSS.DetailContentDiv>
               {t('프로젝트에 기여한점')}
@@ -83,7 +84,6 @@ const HanghaeCapsule = ({ moveToLink }) => {
                 <p>💡</p>
                 <p>
                   recoil-persist + sessionStorage
-                  <br />
                   {t(
                     '새로고침 시 편지 내용이 초기화되는 걸 방지 및 최초로 인증번호 발송한 이메일과 동일한 이메일로 재발송 요청인지 구분하기 위함',
                   )}
@@ -97,7 +97,6 @@ const HanghaeCapsule = ({ moveToLink }) => {
                 <p>💡</p>
                 <p>
                   {t('API 요청 fetch → Axios')}
-                  <br />
                   {t('자동으로 JSON 변환을 해주며, 더 편리하게 작업할 수 있는 API 디자인을 가짐.')}
                 </p>
               </CSS.ContributionsDiv>

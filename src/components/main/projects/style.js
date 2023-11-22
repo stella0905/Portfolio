@@ -9,6 +9,11 @@ export const ProjectSection = styled.section`
   color: #101820;
   position: relative;
 
+  @media screen and (max-width: 900px) {
+    width: 400px;
+    height: 900px;
+  }
+
   will-change: transform;
   transform-style: preserve-3d; /* 3D 변환을 위한 설정 */
   transform: perspective(1000px) rotateY(0deg); /* 초기 회전 값 및 원근 효과 추가 */
@@ -54,6 +59,14 @@ export const ProjectDiv = styled.div`
     width: 400px;
     height: 320px;
   }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 360px;
+    }
+  }
 `
 export const ContentDiv = styled.div`
   width: 350px;
@@ -93,6 +106,11 @@ export const DetailBox = styled.div`
   margin-top: 30px;
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 export const DetailContentDiv = styled.div`
   padding-left: 20px;
@@ -100,10 +118,15 @@ export const DetailContentDiv = styled.div`
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
+
   p {
     color: #63605f;
     font-size: 16px;
     font-weight: 400;
+  }
+  @media screen and (max-width: 900px) {
+    padding-left: 0px;
+    padding-bottom: 20px;
   }
 `
 export const ContributionsDiv = styled.div`

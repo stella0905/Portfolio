@@ -77,12 +77,9 @@ const DieDie = ({ moveToLink }) => {
                 )}
               </p>
               <br />
+
               {t('주요 기능')}
-              <p>
-                {t('다국어 처리, 반응형, 유저 검색, 파일 업로드, 랭킹 조회')}
-                <br />
-              </p>
-              <br />
+              <p>{t('다국어 처리, 반응형, 유저 검색, 파일 업로드, 랭킹 조회')}</p>
             </CSS.DetailContentDiv>
             <CSS.DetailContentDiv>
               {t('프로젝트에 기여한점')}

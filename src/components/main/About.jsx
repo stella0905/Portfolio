@@ -109,7 +109,7 @@ const ContentDiv = styled.div`
     }
     @media screen and (max-width: 580px) {
       font-size: 15px;
-      width: 450px;
+      width: 420px;
     }
   }
   p {

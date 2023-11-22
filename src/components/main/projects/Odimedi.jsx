@@ -68,6 +68,7 @@ const Odimedi = ({ moveToLink }) => {
                 )}
               </p>
               <br />
+
               {t('주요 기능')}
               <p>{t('지도 API, 조건별 검색필터, 댓글기능, 마이페이지, 북마크, 랭킹 조회')}</p>
             </CSS.DetailContentDiv>
