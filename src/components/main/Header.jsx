@@ -63,6 +63,7 @@ const Logo = styled.div`
   font-weight: 900;
   letter-spacing: 3px;
   color: wheat;
+  gap: 10px;
   img {
     /* background-color: red; */
     width: 40px;
