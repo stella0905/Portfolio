@@ -75,10 +75,6 @@ const Title = styled.div`
   flex-direction: column;
   align-items: center;
   font-weight: 900;
-  p {
-    margin-top: 120px;
-    font-size: 30px;
-  }
 `
 const AnimatedHeading = styled.div`
   display: flex;
@@ -89,11 +85,26 @@ const AnimatedHeading = styled.div`
     font-size: 90px;
     line-height: 120px;
     animation: ${fadeIn} 1s ease-in-out forwards;
+
+    @media screen and (max-width: 800px) {
+      font-size: 60px;
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: 30px;
+    }
   }
   h2 {
     color: wheat;
     font-size: 50px;
     animation: ${fadeIn} 1s ease-in-out forwards;
+    @media screen and (max-width: 800px) {
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: 25px;
+    }
   }
 `
 
@@ -120,7 +131,10 @@ const MoveBtn = styled.button`
   animation: ${bounce} 1s ease infinite;
 
   img {
-    width: 100px;
+    width: 80px;
+    @media (max-width: 500px) {
+      width: 50px;
+    }
   }
 
   &:hover {
@@ -131,6 +145,17 @@ const MoveBtn = styled.button`
 
     transform: scale(1.05);
     transition: 0.2s;
+  }
+  p {
+    margin-top: 80px;
+    font-size: 30px;
+    @media (max-width: 800px) {
+      margin-top: 30px;
+      font-size: 25px;
+    }
+    @media (max-width: 800px) {
+      font-size: 15px;
+    }
   }
   @media (max-height: 600px) {
     display: none;
