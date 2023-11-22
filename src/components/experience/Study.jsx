@@ -14,16 +14,22 @@ const Study = () => {
     <StudyDiv>
       <h2>{t('프론트 언어기술 스터디')} </h2>
       <ContentDiv>
-        Study Wiki :
-        <button onClick={() => moveToLinkBtnHandler('frontStudyNotion')}>
-          {t('구경가기')}
-          <Arrow width="30" height="30" fill="#363636" />
-        </button>
-        GitHub :
-        <button onClick={() => moveToLinkBtnHandler('frontStudyNotion')}>
-          {t('구경가기')}
-          <Arrow width="30" height="30" fill="#363636" />
-        </button>
+        <div>
+          <div>
+            Study Wiki :
+            <button onClick={() => moveToLinkBtnHandler('frontStudyNotion')}>
+              {t('구경가기')}
+              <Arrow width="30" height="30" fill="#363636" />
+            </button>
+          </div>
+          <div>
+            GitHub :
+            <button onClick={() => moveToLinkBtnHandler('frontStudyNotion')}>
+              {t('구경가기')}
+              <Arrow width="30" height="30" fill="#363636" />
+            </button>
+          </div>
+        </div>
       </ContentDiv>
       <ContentDiv>
         {t('진행동기')} :
@@ -73,12 +79,19 @@ const StudyDiv = styled.div`
     font-size: 20px;
     font-weight: 800;
   }
+  @media screen and (max-width: 720px) {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
 `
 const ContentDiv = styled.div`
   color: black;
   font-size: 18px;
   font-weight: 600;
   display: flex;
+  flex-direction: column;
+
   button {
     margin-right: 50px;
     display: flex;
@@ -98,5 +111,21 @@ const ContentDiv = styled.div`
     color: #222120;
     font-size: 15px;
     font-weight: 600;
+  }
+  div {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    @media screen and (max-width: 720px) {
+      div {
+        flex-direction: column;
+      }
+    }
+  }
+  @media screen and (max-width: 720px) {
+    p {
+      width: 350px;
+    }
   }
 `

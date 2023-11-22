@@ -15,6 +15,7 @@ const Experiences = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: true, //드래그 가능 여부
+    arrows: true, //이전 다음 버튼 표시 여부(true or false) ▶기본값 true
   }
   return (
     <Background id={'experience'}>
@@ -35,11 +36,27 @@ export default Experiences
 const Background = styled.div`
   width: 100%;
   height: 100%;
-  padding-right: 400px;
-  padding-left: 400px;
+  padding-left: 350px;
+  padding-right: 350px;
   padding-bottom: 100px;
   background-color: #364b44;
   color: #f2aa4c;
+  @media screen and (max-width: 1350px) {
+    padding-left: 280px;
+    padding-right: 280px;
+  }
+  @media screen and (max-width: 1220px) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  @media screen and (max-width: 1050px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @media screen and (max-width: 860px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
   h1 {
     margin-top: 80px;
@@ -54,6 +71,7 @@ const StyledSlider = styled(Slider)`
     width: 100%;
     height: 100%;
     margin: 5%;
+    border: 1px solid red;
   }
 
   .slick-slide {

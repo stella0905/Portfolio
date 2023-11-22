@@ -15,9 +15,9 @@ const Education = () => {
       <h2>{t('부트캠프 항해99 14기')} </h2>
       <ContentDiv>
         {t('부트캠프 참여 동기')}
-        <p>
+        <div>
           {t('여러 프로젝트를 경험해보고 같은 꿈을 목표로 하는 사람들과 함께 공부하면서 동기부여되기 위해 참여함.')}
-        </p>
+        </div>
       </ContentDiv>
       <Content>
         <p>
@@ -59,6 +59,9 @@ const StudyDiv = styled.div`
     font-size: 20px;
     font-weight: 800;
   }
+  @media screen and (max-width: 720px) {
+    width: 400px;
+  }
 `
 const ContentDiv = styled.div`
   color: black;
@@ -78,9 +81,9 @@ const ContentDiv = styled.div`
       transition: 0.2s;
     }
   }
-  p {
+  div {
     margin-left: 10px;
-    width: 400px;
+    width: 420px;
     color: #222120;
     font-size: 15px;
     font-weight: 600;
