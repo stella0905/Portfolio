@@ -109,12 +109,19 @@ const SkillImg = styled.img`
   width: 60px;
   height: 60px;
   margin-right: 20px;
+  @media screen and (max-width: 500px) {
+    width: 50px;
+    height: 50px;
+  }
 `
 const SkillName = styled.h3`
   font-size: 45px;
   font-weight: 900;
   text-align: center;
   color: #8b949e;
+  @media screen and (max-width: 500px) {
+    font-size: 30px;
+  }
 `
 const SkillDesc = styled.p`
   position: absolute;
@@ -125,6 +132,9 @@ const SkillDesc = styled.p`
   color: #ffffff;
   left: 0px;
   white-space: pre-wrap;
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
+  }
 `
 const SkillWrapDiv = styled.div`
   display: flex;
@@ -136,6 +146,7 @@ const SkillWrapDiv = styled.div`
   height: 130px;
   border-radius: 10px;
   width: fit-content;
+
   ${SkillDesc} {
     visibility: hidden;
     opacity: 0;
