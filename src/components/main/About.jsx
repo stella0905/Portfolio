@@ -52,6 +52,9 @@ const MoveToLinkBoxDiv = styled.div`
     font-size: 20px;
     font-weight: 900;
     color: wheat;
+    @media screen and (max-width: 580px) {
+      font-size: 16px;
+    }
   }
   p {
     display: flex;
@@ -70,6 +73,9 @@ const MoveToLinkBoxDiv = styled.div`
     &:hover {
       transform: scale(1.03);
       transition: 0.2s;
+    }
+    @media screen and (max-width: 580px) {
+      font-size: 14px;
     }
   }
 `
@@ -108,8 +114,9 @@ const ContentDiv = styled.div`
       width: 600px;
     }
     @media screen and (max-width: 580px) {
-      font-size: 15px;
-      width: 420px;
+      font-size: 14px;
+      width: 380px;
+      margin-left: 30px;
     }
   }
   p {

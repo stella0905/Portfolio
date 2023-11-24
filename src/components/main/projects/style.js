@@ -10,7 +10,7 @@ export const ProjectSection = styled.section`
   position: relative;
 
   @media screen and (max-width: 900px) {
-    width: 400px;
+    width: 360px;
     height: 900px;
   }
 
@@ -69,7 +69,8 @@ export const ProjectDiv = styled.div`
   }
 `
 export const ContentDiv = styled.div`
-  width: 350px;
+  /* background-color: red; */
+  width: 320px;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
@@ -114,7 +115,7 @@ export const DetailBox = styled.div`
 `
 export const DetailContentDiv = styled.div`
   padding-left: 20px;
-  width: 380px;
+  width: 320px;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;

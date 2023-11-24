@@ -80,7 +80,7 @@ const StudyDiv = styled.div`
     font-weight: 800;
   }
   @media screen and (max-width: 720px) {
-    width: 400px;
+    width: 360px;
     display: flex;
     flex-direction: column;
   }
@@ -125,7 +125,8 @@ const ContentDiv = styled.div`
   }
   @media screen and (max-width: 720px) {
     p {
-      width: 350px;
+      margin-left: 0px;
+      width: 310px;
     }
   }
 `

@@ -60,7 +60,7 @@ const StudyDiv = styled.div`
     font-weight: 800;
   }
   @media screen and (max-width: 720px) {
-    width: 400px;
+    width: 360px;
   }
 `
 const ContentDiv = styled.div`
@@ -68,6 +68,7 @@ const ContentDiv = styled.div`
   font-size: 18px;
   font-weight: 600;
   display: flex;
+
   button {
     margin-right: 50px;
     display: flex;
@@ -87,6 +88,13 @@ const ContentDiv = styled.div`
     color: #222120;
     font-size: 15px;
     font-weight: 600;
+  }
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    div {
+      width: 320px;
+      margin-left: 0px;
+    }
   }
 `
 const Content = styled.div`
