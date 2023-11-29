@@ -52,8 +52,11 @@ const MoveToLinkBoxDiv = styled.div`
     font-size: 20px;
     font-weight: 900;
     color: wheat;
-    @media screen and (max-width: 580px) {
-      font-size: 16px;
+  }
+  @media screen and (max-width: 580px) {
+    margin-top: 20px;
+    label {
+      font-size: 14px;
     }
   }
   p {
@@ -115,8 +118,8 @@ const ContentDiv = styled.div`
     }
     @media screen and (max-width: 580px) {
       font-size: 14px;
-      width: 380px;
-      margin-left: 30px;
+      width: 340px;
+      margin-left: 20px;
     }
   }
   p {

@@ -54,8 +54,8 @@ const Background = styled.div`
     padding-right: 100px;
   }
   @media screen and (max-width: 860px) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   h1 {
@@ -87,5 +87,11 @@ const StyledSlider = styled(Slider)`
     height: 100%;
     box-sizing: border-box;
     margin-bottom: 7px;
+  }
+  @media screen and (max-width: 860px) {
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+    }
   }
 `
