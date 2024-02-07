@@ -40,7 +40,7 @@ const Odimedi = ({ moveToLink }) => {
               {t('팀 프로젝트')}
               <p>FE 1명, BE 3명, PD 1명</p>
               {t('프로젝트 기간')}
-              <p>2023.05.19 ~ 2023.06.30</p>
+              2023.05.19 ~ 2023.06.30 (2개월 소요)
               {t('사용한 기술스텍')}
               <p>React, JavaScript, Recoil, kakaomap api, Axios, React-Query, styled-component</p>
               <CSS.MoveToBox>

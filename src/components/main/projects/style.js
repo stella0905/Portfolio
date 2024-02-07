@@ -85,11 +85,11 @@ export const MoveToBox = styled.div`
   display: flex;
   gap: 10px;
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   height: 40px;
   button {
     display: flex;
-    justify-content: center;
+
     align-items: center;
 
     background-color: transparent;
@@ -107,6 +107,7 @@ export const DetailBox = styled.div`
   margin-top: 30px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   @media screen and (max-width: 900px) {
     flex-direction: column;
     justify-content: center;
@@ -115,7 +116,7 @@ export const DetailBox = styled.div`
 `
 export const DetailContentDiv = styled.div`
   padding-left: 20px;
-  width: 320px;
+  width: 330px;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;

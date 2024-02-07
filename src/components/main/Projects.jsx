@@ -4,6 +4,7 @@ import DieDie from './projects/DieDie'
 import Odimedi from './projects/Odimedi'
 import HanghaeCapsule from './projects/HanghaeCapsule'
 import { moveToLink } from '../common/linkUrls'
+import Tteokguk from './projects/Tteokguk'
 
 const Projects = () => {
   const moveToLinkBtnHandler = (linkName) => {
@@ -12,6 +13,7 @@ const Projects = () => {
   return (
     <Background id={'project'}>
       <h1>PROJECTS</h1>
+      <Tteokguk moveToLink={moveToLinkBtnHandler} />
       <DieDie moveToLink={moveToLinkBtnHandler} />
       <Odimedi moveToLink={moveToLinkBtnHandler} />
       <HanghaeCapsule moveToLink={moveToLinkBtnHandler} />

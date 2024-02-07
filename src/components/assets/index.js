@@ -9,5 +9,6 @@ import langEn from './langEn.svg'
 import langKo from './langKo.svg'
 import uri from './uri.png'
 import menubar from './menubar.png'
+import tteokguk from './tteokguk.gif'
 
-export { arrow, bottomArrow, about, diedie, hanghaeCapsule, intro, odimedi, langEn, langKo, uri, menubar }
+export { arrow, bottomArrow, about, diedie, hanghaeCapsule, intro, odimedi, langEn, langKo, uri, menubar, tteokguk }

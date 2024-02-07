@@ -40,7 +40,7 @@ const DieDie = ({ moveToLink }) => {
               {t('팀 프로젝트')}
               <p>FE 4명, BE 3명, PD 1명</p>
               {t('프로젝트 기간')}
-              <p>진행중</p>
+              <p>2023.09 ~ 2023.11 (3개월 소요)</p>
               {t('사용한 기술스텍')}
               <p>
                 React, TypeScript, Recoil, Axios,
@@ -48,13 +48,12 @@ const DieDie = ({ moveToLink }) => {
                 <br /> React-i18next
               </p>
               <CSS.MoveToBox>
-                <button onClick={() => moveToLink('diedieGithub')}>
-                  GitHub
+                <button onClick={() => moveToLink('diedieSite')}>
+                  Website
                   <Arrow width="40" height="40" fill="black" />
                 </button>
-
-                <button onClick={() => moveToLink('diedieSite')}>
-                  Visit Website
+                <button onClick={() => moveToLink('diedieGithub')}>
+                  GitHub
                   <Arrow width="40" height="40" fill="black" />
                 </button>
               </CSS.MoveToBox>
