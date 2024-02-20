@@ -43,6 +43,7 @@ const Odimedi = ({ moveToLink }) => {
               2023.05.19 ~ 2023.06.30 (2개월 소요)
               {t('사용한 기술스텍')}
               <p>React, JavaScript, Recoil, kakaomap api, Axios, React-Query, styled-component</p>
+              <CSS.EmptyDiv />
               <CSS.MoveToBox>
                 <button onClick={() => moveToLink('odimediGithub')}>
                   GitHub

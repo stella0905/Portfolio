@@ -65,5 +65,13 @@
   "프론트 언어기술에 대해 공부 후 발표": "Study and present on front-end language technology.",
   "공통적인 질문에 대한 답변 준비 후 베스트 답변 선정하는 방식으로 스터디 진행 - 프로젝트 주차에는 스터디의 부담을 줄이고자 조금 더 간단한 방법으로 스터디를 진행": "Preparing answers for common questions and selecting the best responses during study sessions. Simplifying study during project weeks to reduce the load.",
   "모던 자바스크립트 딥다이브 스터디 진행 및 언어기술 질문 공부 및 발표": "Modern JavaScript Study with Language Tech Q&A.",
-  "주 1회 진행": "Once a week"
+  "주 1회 진행": "Once a week",
+  "니떡국 내떡국은 설날 덕담을 주고 받을 수 있는 온라인 롤링페이퍼입니다.": "'니떡국 내떡국' is an online rolling paper where you can exchange Lunar New Year anecdotes.",
+  "떡국을 공유하고 덕담을 주고받을 수 있다. 고명을 고르기 어렵다면 랜덤 고명 뽑기가 가능하다. 덕담을 남기고, 나의 캐릭터로 사진을 찍을 수 있다.": "Share your rice cake soup and exchange Lunar New Year anecdotes. If nickname selection is challenging, opt for randomization. Share anecdotes and take photos with your character.",
+  "랜덤룰렛, 고명작성, 이미지 캡쳐, 마이페이지, 떡국 렌더링": "Random roulette, nickname generation, image capture, My Page, rice cake soup rendering",
+  "html2canvas를 사용하여 화면 캡쳐 후 자동 저장 기능 구현": "Implementing automatic saving functionality after capturing the screen using html2canvas",
+  "다양한 사용자를 고려하여 PC뿐만 아니라 모바일, 카카오인앱까지 크로스 브라우징으로 구현": "Implemented cross-browser compatibility, considering various users including PC, mobile, and Kakao In-App.",
+  "로컬/디벨롭/프로덕션마다 다른 base url을 환경변수로 구분하여 링크 복사 기능 구현": "Implemented link copying with distinct base URLs for local, development, and production environments using environment variables.",
+  "상황에 따라 SSR, CSR로 구분하여 렌더링": "Render based on the situation, distinguishing between SSR and CSR.",
+  "조건에 따른 동적 조회 및 페이지네이션 기능 구현": "Implemented dynamic querying and pagination functionality based on conditions."
 }

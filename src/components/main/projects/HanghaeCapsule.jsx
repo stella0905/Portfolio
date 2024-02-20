@@ -46,6 +46,7 @@ const HanghaeCapsule = ({ moveToLink }) => {
                 React, JavaScript, Recoil, Axios,
                 <br /> React-Query, styled-component
               </p>
+              <CSS.EmptyDiv />
               <CSS.MoveToBox>
                 <button onClick={() => moveToLink('hanghaeCapsuleGithub')}>
                   GitHub

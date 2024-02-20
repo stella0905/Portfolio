@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 export const ProjectSection = styled.section`
   width: 850px;
-  height: 500px;
+  height: 100%;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 20px;
@@ -11,7 +11,6 @@ export const ProjectSection = styled.section`
 
   @media screen and (max-width: 900px) {
     width: 360px;
-    height: 900px;
   }
 
   will-change: transform;
@@ -80,6 +79,13 @@ export const ContentDiv = styled.div`
     font-weight: 400;
   }
 `
+export const EmptyDiv = styled.div`
+  width: 10px;
+  height: 0px;
+  @media screen and (max-width: 900px) {
+    height: 120px;
+  }
+`
 export const MoveToBox = styled.div`
   margin-top: 15px;
   display: flex;
@@ -116,11 +122,13 @@ export const DetailBox = styled.div`
 `
 export const DetailContentDiv = styled.div`
   padding-left: 20px;
-  width: 330px;
+  width: 400px;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
-
+  @media screen and (max-width: 900px) {
+    width: 330px;
+  }
   p {
     color: #63605f;
     font-size: 16px;

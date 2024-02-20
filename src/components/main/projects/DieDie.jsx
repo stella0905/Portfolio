@@ -47,6 +47,7 @@ const DieDie = ({ moveToLink }) => {
                 <br /> React-Query, Styled-Component,
                 <br /> React-i18next
               </p>
+              <CSS.EmptyDiv />
               <CSS.MoveToBox>
                 <button onClick={() => moveToLink('diedieSite')}>
                   Website
